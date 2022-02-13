@@ -1,0 +1,50 @@
+  <script type="text/javascript">
+			var str = "b123456";
+			console.log(/^[by]\d{6}$/.test(str));
+		// 请验证字符串是否有五位字母，且字母可以大小写
+			var str1 = "abcde";
+			var str2 = "abcd2"
+			console.log(/^[a-zA-Z]{5}$/.test(str1));
+			console.log(/^[a-zA-Z]{5}$/.test(str2));
+		// 请验证某字符串是否是五位数，且仅由小写字母和点构成
+			var str3 = "mvp..";
+			console.log(/^[a-z\.]{5}$/.test(str3));
+		// 请验证某字符串是否为四位小写字母，且最后以为不能是m字母
+			var str4 = "abcd";
+			var str5 = "abcm";
+			var str6 = "ab#d"
+			console.log(/^[a-z]{3}[a-ln-z]{1}$/.test(str4));
+			console.log(/^[a-z]{3}[a-ln-z]{1}$/.test(str5));
+			console.log(/^[a-z]{3}[a-ln-z]{1}$/.test(str6));
+		// 练习
+			var regexp = /^[1][3-9]\d{5}$/;
+			var str7 = "1434567";
+			var str8 ="2312345";
+			
+			console.log(/^[1][3-9]\d{5}$/.test(str7));
+			console.log(/^[1][3-9]\d{5}$/.test(str8));
+		//练习
+			var regexp = /^\w{5}[1-9]{1}$/;
+			var str9 = "abc_91";
+			var str10 = "abc_90";
+			console.log(/^\w{5}[1-9]{1}$/.test(str9));
+			console.log(/^\w{5}[1-9]{1}$/.test(str10));
+		// 练习1： 请验证字符串是否符合手机号码的规则：11位数字，并且肯定以1开头。
+			var str11 = "12345678901";
+			console.log(/^1\d{10}$/.test(str11));
+		// 练习2：请验证字符串是否是这样：以字母开头，中间是任意位数字（最少1位）构成，并以字母结尾。
+			var str12 = "a2a";
+			console.log(/^[a-zA-Z]\d+[a-zA-Z]$/.test(str12));
+		// 练习3：请验证字符串是否符合网址规则：开头以www.开头，中间是任意位的字符（字母数字下划线），最后以
+		//.com结尾，也可以.com.cn结尾。
+			var str13 = "www.xlearning.com";
+			var str14 = "www.x_learning.com.cn";
+			var str15 = "abcdefg";
+			var regexp4 = /^www\.\w+\.com(\.cn)?$/;
+			console.log(regexp4.test(str13));
+			console.log(regexp4.test(str14));
+			console.log(regexp4.test(str15));
+		// 修饰符
+			var re = /m/gi;
+			var re = new RegExp("m","gi");			
+		</script>
